@@ -19,29 +19,51 @@ There are four processes undergoes in Rankine Cycle:
 The calculations for Rankine Cycle are given below:
 
 Qnet = Wnet
+
 Qin - Qout = Wt - Wp
+
 Qin = heat supplied by the boiler(kj/kg)
+
 Qout = heat rejected by condensor(kj/kg)
+
 Wt = Work done on the turbine(kj/kg)
+
 Wp = Work done by the pump(kj/kg)
+
 Wnet = Wt - Wp
+
 Efficiency of the cycle is given by:
+
 efficiency = Wnet/Qin
+
 also after applying SFEE equation we get
+
 Qin = h1 -h4
+
 Qout = h2 - h3
+
 Wt = h1 -h2
+
 Wp = h4 - h3
+
 Steam Rate : it is defined as rate of steam flow to produce unit KW of output power.and the formula for it is given as below:  SR = 3600/Wnet.
 
 Explanation for the code is as follows:
 
 1.) to erase the workspace we use clear all,close all and clc command.
+
 2.) The input and process labels are  given using fprintf command.
+
 3.) using input command the values of P1,T1 and P2 are to be assigned in command window while exwcuting the program.
+
 4.) The data is restored from the file XSteam.m which is a data table.for state 1 the data for enthalpy and entropy are extracted using variables h_pT and s_pT as assigned.
+
 5.) similarly values of variables for other states are to be calculated using the same way.
+
 6.) for state 2 since the vapour is converted into liquid. the Dryness fraction, enthalpy and entropy for both the liquid and vapour are to be calculated seperately.
+
 7.)at state 3 the temperature at exit of condensor and entry of pump are same.for state 4 since heat addition takes place at constant pressure and volume so entropy will not change and gamma is used to calculate T4 here.
+
 8.) then work done , heat involved and SR are calculated.To plot the saturation curve now temperature is divide into 600 numbers using linspace and for each value the enthalpy and entropy are calculated.
+
 9.) now both the T-S and H-S plots are plotted using plot command  successfully and annotations are added using text command and results of every state points are shown in the command window using fprintf command.
